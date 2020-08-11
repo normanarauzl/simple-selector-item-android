@@ -1,12 +1,17 @@
 package com.example.simpledynamicspinner
 
 import android.app.ProgressDialog
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.widget.*
-import org.w3c.dom.Text
+import androidx.appcompat.app.AppCompatActivity
+import com.mbass.examples.app.analytics.DistributeListener
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
+import com.microsoft.appcenter.distribute.Distribute
+
 
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
@@ -30,6 +35,18 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+        /*App center*/
+
+        Distribute.checkForUpdate()
+        Distribute.setListener(DistributeListener())
+        AppCenter.start(
+            application, "3edb7e7c-cca8-40a9-bbc5-46d073ba4755",
+            Analytics::class.java, Crashes::class.java, Distribute::class.java
+        )
+
+
         setContentView(R.layout.activity_main)
 
         spinner = findViewById( R.id.spinner)
