@@ -37,7 +37,15 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         super.onCreate(savedInstanceState)
 
 
-        /*App center*/
+        /*App center code test for new release*/
+        /*App center code test for new release*/
+        /*App center code test for new release*/
+        /*App center code test for new release*/
+        /*App center code test for new release*/
+        /*App center code test for new release*/
+        /*App center code test for new release*/
+        /*App center code test for new release*/
+        /*App center code test for new release*/
 
         Distribute.checkForUpdate()
         Distribute.setListener(DistributeListener())
