@@ -54,16 +54,6 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         spinner?.adapter = arrayAdapter
         spinner?.onItemSelectedListener = this
         textResult = findViewById(R.id.resultText)
-
-        //        val progressDialog = ProgressDialog(this)
-        //        progressDialog.setMessage("Loading..")
-        //        progressDialog.setCancelable(false)
-        //        progressDialog.show()
-
-        // Handler().postDelayed({progressDialog.dismiss()}, 5000)
-
-        val dialogLauncher = findViewById<Button>(R.id.dialogLauncher)
-        // dialogLauncher.setOnClickListener()
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
