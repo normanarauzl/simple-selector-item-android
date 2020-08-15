@@ -36,19 +36,8 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
-        /*App center code test for new release*/
-        /*App center code test for new release*/
-        /*App center code test for new release*/
-        /*App center code test for new release*/
-        /*App center code test for new release*/
-        /*App center code test for new release*/
-        /*App center code test for new release*/
-        /*App center code test for new release*/
-        /*App center code test for new release*/
-
         Distribute.checkForUpdate()
-        Distribute.setListener(DistributeListener())
+        // Distribute.setListener(DistributeListener())
         AppCenter.start(
             application, "3edb7e7c-cca8-40a9-bbc5-46d073ba4755",
             Analytics::class.java, Crashes::class.java, Distribute::class.java
